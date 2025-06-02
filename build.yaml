@@ -179,21 +179,23 @@ include:
 
   ### SOFLEV2 SOFLEV1 SOFLEPLUS START ###
   # nice!oled sofle
+  # central_left
   - board: nice_nano_v2
     shield: sofle_left nice_oled
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Sofle_Oled\"  -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Sofle_OLED\"  -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
     artifact-name: nice_sofle_left_oled
     snippet: studio-rpc-usb-uart
+  # peripheral_right
   - board: nice_nano_v2
     shield: sofle_right nice_oled
     cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
     artifact-name: nice_sofle_right_oled
 
   # peripheral_left
-  # - board: nice_nano_v2
-  #   shield: sofle_left_peripheral nice_oled
-  #   cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
-  #   artifact-name: nice_sofle_left_peripheral_oled
+  - board: nice_nano_v2
+    shield: sofle_left_peripheral nice_oled
+    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
+    artifact-name: nice_sofle_left_peripheral_oled
 
   # Xiao_Dongle
   # - board: seeeduino_xiao_ble
@@ -204,8 +206,9 @@ include:
 
   # ProMicro_Dongle
   - board: nice_nano_v2
-    shield: sofle_dongle_pro_micro dongle_display
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"SofleDongle_P\"  -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=n -DCONFIG_ZMK_IDLE_TIMEOUT=60000
+    # shield: sofle_dongle_pro_micro dongle_display
+    shield: sofle_dongle_pro_micro prospector_dongle
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Sofle_Dongle\"  -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=n -DCONFIG_ZMK_IDLE_TIMEOUT=60000
     artifact-name: nice_sofle_dongle_oled
     snippet: studio-rpc-usb-uart
   ### SOFLEV2 SOFLEV1 SOFLEPLUS END ###
