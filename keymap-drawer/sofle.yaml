@@ -1,8 +1,66 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  BAS: [ESCAPE, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', \, ↹, Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace-outline$$', LEFT CONTROL, A, S, D, F, G, H,
-    J, K, L, ;, '''', '$$mdi:apple-keyboard-shift$$', Z, X, C, V, B, MUTE, MUTE, N, M, ',', ., /, '$$mdi:apple-keyboard-shift$$', LEFT CONTROL, '$$mdi:apple-keyboard-option$$',
-    LEFT WIN, LOW, ␣, ENTER, RAI, RIGHT WIN, '$$mdi:apple-keyboard-option$$', RIGHT CONTROL]
+  BAS:
+  - ESCAPE
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - \
+  - ↹
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - $$mdi:backspace-outline$$
+  - LEFT CONTROL
+  - {t: A, h: LEFT CONTROL}
+  - {t: S, h: LEFT ALT}
+  - {t: D, h: LEFT SHIFT}
+  - {t: F, h: LEFT GUI}
+  - G
+  - H
+  - {t: J, h: RIGHT GUI}
+  - {t: K, h: RIGHT SHIFT}
+  - {t: L, h: RIGHT ALT}
+  - {t: ;, h: '$$mdi:apple-keyboard-control$$'}
+  - ''''
+  - $$mdi:apple-keyboard-shift$$
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - MUTE
+  - MUTE
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - $$mdi:apple-keyboard-shift$$
+  - LEFT CONTROL
+  - $$mdi:apple-keyboard-option$$
+  - LEFT WIN
+  - LOW
+  - ␣
+  - ENTER
+  - RAI
+  - RIGHT WIN
+  - $$mdi:apple-keyboard-option$$
+  - RIGHT CONTROL
   LOW:
   - '`'
   - F1
@@ -125,3 +183,10 @@ layers:
   - {t: ▽, type: trans}
   - Boot
   - Reset
+combos:
+- p: [31, 32, 33]
+  k: ENTER
+  l: [BAS]
+- p: [26, 27, 28]
+  k: ''
+  l: [BAS]
