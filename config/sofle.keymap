@@ -16,14 +16,14 @@
         enter {
             bindings = <&kp ENTER>;
             key-positions = <31 32 33>;
-            timeout-ms = <40>;
+            timeout-ms = <200>;
             layers = <0>;
         };
 
         escape {
-            bindings = <&none>;
+            bindings = <&kp ESCAPE>;
             key-positions = <26 27 28>;
-            timeout-ms = <40>;
+            timeout-ms = <200>;
             require-prior-idle-ms = <0>;
             layers = <0>;
         };
