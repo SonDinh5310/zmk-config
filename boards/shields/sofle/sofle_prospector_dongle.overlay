@@ -101,7 +101,11 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
 
 //dummy for encoders to work
 //idea from this https://github.com/ergomechstore/sofle-hybrid-ergomech-zmk/blob/test_mouse/boards/shields/sofle_ergomech/sofle_ergomech_dongle.overlay
-&dummy_encoder {
+&dummy_encoder_left {
+    status = "okay";
+};
+
+&dummy_encoder_right {
     status = "okay";
 };
 
