@@ -34,7 +34,8 @@ endif
 
 endif # ZMK_DISPLAY
 
-if LVGL
+# if LVGL
+if SSD1306
 
 config LV_Z_VDB_SIZE
     default 64
