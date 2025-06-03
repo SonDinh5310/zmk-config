@@ -15,7 +15,8 @@
     chosen {
         zephyr,display = &oled;
         zmk,kscan = &mock_kscan;
-        zmk,physical-layout = &josefadamcik_sofle_layout;
+        //zmk,physical-layout = &josefadamcik_sofle_layout;
+        zmk,physical-layout = &layout_0;
     };
 
     default_transform: keymap_transform_0 {
