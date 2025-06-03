@@ -14,9 +14,6 @@ manifest:
     # prospetor dongle display
     - name: carrefinho                        
       url-base: https://github.com/carrefinho
-    # prospector zmk module with fix
-    - name: tokyo2006
-      url-base: https://github.com/tokyo2006
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -27,9 +24,6 @@ manifest:
       remote: englmaxi
       revision: main
     # nice_oled - nice_epaper
-    # - name: zmk-nice-oled
-    #   remote: mctechnology17
-    #   revision: main
     - name: zmk-nice-oled
       remote: SonDinh5310
       revision: feat/dev-zmk-nice-oled
@@ -43,7 +37,7 @@ manifest:
       revision: main
     # prospector dongle display
     - name: prospector-zmk-module                 
-      remote: tokyo2006                      
-      revision: micro_spi2              
+      remote: carrefinho                      
+      revision: main              
   self:
     path: config

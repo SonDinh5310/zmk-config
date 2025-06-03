@@ -211,7 +211,7 @@ include:
   #   artifact-name: nice_sofle_dongle_oled
   #   snippet: studio-rpc-usb-uart
   # Prospector_dongle
-  - board: nice_nano_v2
+  - board: seeeduino_xiao_ble
     shield: sofle_prospector_dongle prospector_adapter
     cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Sofle_Dongle\"  -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=n -DCONFIG_ZMK_IDLE_TIMEOUT=60000
     artifact-name: sofle_prospector_dongle_oled
