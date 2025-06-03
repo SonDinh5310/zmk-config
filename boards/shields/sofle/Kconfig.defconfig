@@ -52,6 +52,9 @@ choice LV_COLOR_DEPTH
     default LV_COLOR_DEPTH_1
 endchoice
 
+configdefault LV_COLOR_16_SWAP
+	default y
+
 endif # LVGL
 
 if ZMK_RGB_UNDERGLOW
