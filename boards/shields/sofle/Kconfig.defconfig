@@ -45,9 +45,24 @@ config LV_DPI_DEF
 config LV_Z_BITS_PER_PIXEL
     default 1
 
+config LV_COLOR_DEPTH
+    default 16
+
+if SHIELD_SOFLE_PROSPECTOR_DONGLE
+    
 choice LV_COLOR_DEPTH
-    default LV_COLOR_DEPTH_1
+    default LV_COLOR_DEPTH_16
 endchoice
+
+endif
+    
+if SHIELD_SOFLE_LEFT || SHIELD_SOFLE_RIGHT || SHIELD_SOFLE_LEFT_PERIPHERAL
+
+choice LV_COLOR_DEPTH
+    default LV_COLOR_DEPTH_16
+endchoice
+
+endif
 
 endif # LVGL
 

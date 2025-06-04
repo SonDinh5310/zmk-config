@@ -188,5 +188,5 @@ combos:
   k: ENTER
   l: [BAS]
 - p: [26, 27, 28]
-  k: ''
+  k: ESCAPE
   l: [BAS]

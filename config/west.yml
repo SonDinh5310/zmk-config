@@ -24,9 +24,6 @@ manifest:
       remote: englmaxi
       revision: main
     # nice_oled - nice_epaper
-    # - name: zmk-nice-oled
-    #   remote: mctechnology17
-    #   revision: main
     - name: zmk-nice-oled
       remote: SonDinh5310
       revision: feat/dev-zmk-nice-oled
