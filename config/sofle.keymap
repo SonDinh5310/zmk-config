@@ -26,13 +26,6 @@
             timeout-ms = <200>;
             layers = <0 1 2>;
         };
-
-        toggle_gaming_layer {
-            bindings = <&toggle_gaming_layer>;
-            key-positions = <53>;
-            layers = <0>;
-            timeout-ms = <100>;
-        };
     };
 
     behaviors {
