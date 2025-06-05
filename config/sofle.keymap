@@ -17,15 +17,29 @@
             bindings = <&kp ENTER>;
             key-positions = <31 32 33>;
             timeout-ms = <200>;
-            layers = <0>;
+            layers = <0 1 2>;
         };
 
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <26 27 28>;
             timeout-ms = <200>;
-            require-prior-idle-ms = <0>;
-            layers = <0>;
+            layers = <0 1 2>;
+        };
+
+        toggle_gaming_layer {
+            bindings = <&toggle_gaming_layer>;
+            key-positions = <>;
+        };
+    };
+
+    behaviors {
+        toggle_gaming_layer: toggle_gaming_layer {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&mo 1>, <&mo 1>, <&mo 1>, <&mo 1>;
+
+            tapping-term-ms = <200>;
         };
     };
 
@@ -43,11 +57,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE        &kp N1              &kp N2            &kp N3            &kp N4          &kp N5                            &kp N6  &kp N7           &kp N8             &kp N9             &kp N0               &kp BACKSLASH
-&kp TAB           &kp Q               &kp W             &kp E             &kp R           &kp T                             &kp Y   &kp U            &kp I              &kp O              &kp P                &kp BSPC
-&kp LEFT_CONTROL  &mt LEFT_CONTROL A  &mt LEFT_ALT S    &mt LEFT_SHIFT D  &mt LEFT_GUI F  &kp G                             &kp H   &mt RIGHT_GUI J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L    &mt RCTRL SEMICOLON  &kp SQT
-&kp LSHFT         &kp Z               &kp X             &kp C             &kp V           &kp B   &kp C_MUTE    &kp C_MUTE  &kp N   &kp M            &kp COMMA          &kp DOT            &kp FSLH             &kp RSHFT
-                                      &kp LEFT_CONTROL  &kp LALT          &kp LEFT_WIN    &mo 1   &kp SPACE     &kp ENTER   &mo 2   &kp RIGHT_WIN    &kp RALT           &kp RIGHT_CONTROL
+&kp ESCAPE        &kp N1  &kp N2            &kp N3        &kp N4    &kp N5                            &kp N6  &kp N7    &kp N8         &kp N9             &kp N0         &kp BACKSLASH
+&kp TAB           &kp Q   &kp W             &kp E         &kp R     &kp T                             &kp Y   &kp U     &kp I          &kp O              &kp P          &kp BSPC
+&kp LEFT_CONTROL  &kp A   &kp S             &kp D         &kp F     &kp G                             &kp H   &kp J     &kp K          &kp L              &kp SEMICOLON  &kp SQT
+&kp LSHFT         &kp Z   &kp X             &kp C         &kp V     &kp B   &kp C_MUTE    &kp C_MUTE  &kp N   &kp M     &kp COMMA      &kp DOT            &kp FSLH       &kp RSHFT
+                          &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LGUI  &mo 1   &kp SPACE     &kp SPACE   &mo 2   &kp RGUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL
             >;
 
             sensor-bindings =
@@ -66,10 +80,10 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp GRAVE  &kp F1     &kp F2     &kp F3       &kp F4          &kp F5                             &kp F6            &kp F7             &kp F8           &kp F9     &kp F10   &kp F11
-&mo 2      &kp TILDE  &kp EQUAL  &kp KP_PLUS  &kp LEFT_BRACE  &kp RIGHT_BRACE                    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS        &kp UNDER  &kp PIPE  &kp F12
-&trans     &kp EXCL   &kp AT     &kp HASH     &kp DLLR        &kp PRCNT                          &kp CARET         &kp AMPS           &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &trans
-&trans     &trans     &trans     &trans       &trans          &trans           &trans    &trans  &trans            &trans             &trans           &trans     &trans    &trans
+&kp GRAVE  &kp F1     &kp F2     &kp F3       &kp F4          &kp F5                             &kp F6            &kp F7             &kp F8           &kp F9            &kp F10   &kp F11
+&mo 2      &kp TILDE  &kp EQUAL  &kp KP_PLUS  &kp LEFT_BRACE  &kp RIGHT_BRACE                    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS        &kp UNDER         &kp PIPE  &kp F12
+&trans     &kp EXCL   &kp AT     &kp HASH     &kp DLLR        &kp PRCNT                          &kp CARET         &kp AMPS           &kp KP_MULTIPLY  &kp LPAR          &kp RPAR  &trans
+&trans     &trans     &trans     &trans       &trans          &trans           &trans    &trans  &kp COLON         &kp DOUBLE_QUOTES  &kp LT           &kp GREATER_THAN  &trans    &trans
                       &trans     &trans       &trans          &trans           &trans    &trans  &trans            &trans             &trans           &trans
             >;
 
@@ -95,6 +109,21 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        gaming_layer {
+            bindings = <
+&kp ESC    &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                            &kp N6  &kp N7    &kp N8     &kp N9     &kp N0    &kp BSLH
+&kp TAB    &kp Q   &kp W      &kp E     &kp R     &kp T                             &kp Y   &kp U     &kp I      &kp O      &kp P     &kp BSPC
+&kp LCTRL  &kp A   &kp S      &kp D     &kp F     &kp G                             &kp H   &kp J     &kp K      &kp L      &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z   &kp X      &kp C     &kp V     &kp B   &kp C_MUTE    &kp C_MUTE  &kp N   &kp M     &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
+                   &kp LCTRL  &kp LGUI  &kp LALT  &mo 1   &kp SPACE     &kp ENTER   &mo 2   &kp RALT  &kp RGUI   &kp RCTRL
+            >;
+
+            label = "GAM";
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp PG_DN PG_UP>;
         };
     };
 };
