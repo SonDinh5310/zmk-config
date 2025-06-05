@@ -29,7 +29,7 @@
 
         toggle_gaming_layer {
             bindings = <&toggle_gaming_layer>;
-            key-positions = <>;
+            key-positions = <53>;
             layers = <0>;
             timeout-ms = <100>;
         };
@@ -48,7 +48,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base_layer {
+        default_layer {
             display-name = "BAS";
 
             // ------------------------------------------------------------------------------------------------------------
