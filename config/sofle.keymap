@@ -13,14 +13,14 @@
     combos {
         compatible = "zmk,combos";
 
-        enter {
+        Enter {
             bindings = <&kp ENTER>;
             key-positions = <31 32 33>;
             timeout-ms = <200>;
             layers = <0 1 2>;
         };
 
-        escape {
+        Escape {
             bindings = <&kp ESCAPE>;
             key-positions = <26 27 28>;
             timeout-ms = <200>;
@@ -32,7 +32,7 @@
         toggle_gaming_layer: toggle_gaming_layer {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&mo 1>, <&mo 1>, <&mo 1>, <&mo 1>;
+            bindings = <&mo 1>, <&mo 1>, <&mo 1>, <&mo 1>, <&tog 3>;
 
             tapping-term-ms = <200>;
         };
