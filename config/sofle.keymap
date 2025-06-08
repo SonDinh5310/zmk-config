@@ -29,12 +29,13 @@
     };
 
     behaviors {
-        toggle_gaming_layer: toggle_gaming_layer {
+        td_mo_layer: td_layer {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&mo 1>, <&mo 1>, <&mo 1>, <&tog 3>;
 
             tapping-term-ms = <200>;
+            label = "td_toggle_low_gam_layer";
         };
     };
 
@@ -62,6 +63,8 @@
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
                 <&inc_dec_kp PG_DN PG_UP>;
+
+            label = "BASE";
         };
 
         lower_layer {
@@ -83,6 +86,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            label = "LOWR";
         };
 
         raise_layer {
@@ -104,18 +108,19 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            label = "RAIS";
         };
 
         gaming_layer {
             bindings = <
-&kp ESC    &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                            &kp N6  &kp N7    &kp N8     &kp N9     &kp N0    &kp BSLH
-&kp TAB    &kp Q   &kp W      &kp E     &kp R     &kp T                             &kp Y   &kp U     &kp I      &kp O      &kp P     &kp BSPC
-&kp LCTRL  &kp A   &kp S      &kp D     &kp F     &kp G                             &kp H   &kp J     &kp K      &kp L      &kp SEMI  &kp APOS
-&kp LSHFT  &kp Z   &kp X      &kp C     &kp V     &kp B   &kp C_MUTE    &kp C_MUTE  &kp N   &kp M     &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
-                   &kp LCTRL  &kp LGUI  &kp LALT  &mo 1   &kp SPACE     &kp ENTER   &mo 2   &kp RALT  &kp RGUI   &kp RCTRL
+&kp ESC    &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                                  &kp N6  &kp N7    &kp N8     &kp N9     &kp N0    &kp BSLH
+&kp TAB    &kp Q   &kp W      &kp E     &kp R     &kp T                                   &kp Y   &kp U     &kp I      &kp O      &kp P     &kp BSPC
+&kp LCTRL  &kp A   &kp S      &kp D     &kp F     &kp G                                   &kp H   &kp J     &kp K      &kp L      &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z   &kp X      &kp C     &kp V     &kp B         &kp C_MUTE    &kp C_MUTE  &kp N   &kp M     &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
+                   &kp LCTRL  &kp LGUI  &kp LALT  &td_mo_layer  &kp SPACE     &kp ENTER   &mo 2   &kp RALT  &kp RGUI   &kp RCTRL
             >;
 
-            label = "GAM";
+            label = "GAME";
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
                 <&inc_dec_kp PG_DN PG_UP>;
