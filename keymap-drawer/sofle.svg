@@ -232,8 +232,8 @@ rect.held, rect.combo.held {
   visibility: hidden;
 }
 </style>
-<g transform="translate(40, 0)" class="layer-BAS">
-<text x="0" y="28" class="label" id="BAS">BAS:</text>
+<g transform="translate(40, 0)" class="layer-BASE">
+<text x="0" y="28" class="label" id="BASE">BASE:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 63)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -467,8 +467,8 @@ rect.held, rect.combo.held {
 </g>
 <g transform="translate(580, 274) rotate(-22.5)" class="key keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#RAI">
-<text x="0" y="0" class="key tap layer-activator">RAI</text>
+<a href="#RAIS">
+<text x="0" y="0" class="key tap layer-activator">RAIS</text>
 </a></g>
 <g transform="translate(644, 259)" class="key keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -500,8 +500,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 398)" class="layer-LOW">
-<text x="0" y="28" class="label" id="LOW">LOW:</text>
+<g transform="translate(40, 398)" class="layer-LOWR">
+<text x="0" y="28" class="label" id="LOWR">LOWR:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 63)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -553,8 +553,8 @@ rect.held, rect.combo.held {
 </g>
 <g transform="translate(28, 119)" class="key keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#RAI">
-<text x="0" y="0" class="key tap layer-activator">RAI</text>
+<a href="#RAIS">
+<text x="0" y="0" class="key tap layer-activator">RAIS</text>
 </a></g>
 <g transform="translate(84, 119)" class="key keypos-13">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -762,8 +762,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 795)" class="layer-RAI">
-<text x="0" y="28" class="label" id="RAI">RAI:</text>
+<g transform="translate(40, 795)" class="layer-RAIS">
+<text x="0" y="28" class="label" id="RAIS">RAIS:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 63)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1042,8 +1042,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 1193)" class="layer-GAM">
-<text x="0" y="28" class="label" id="GAM">GAM:</text>
+<g transform="translate(40, 1193)" class="layer-GAME">
+<text x="0" y="28" class="label" id="GAME">GAME:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 63)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1259,8 +1259,9 @@ rect.held, rect.combo.held {
 </g>
 <g transform="translate(316, 274) rotate(22.5)" class="key keypos-53">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 60%">&amp;td_mo_la…</tspan></text>
-</g>
+<a href="#LOWR">
+<text x="0" y="0" class="key tap layer-activator">LOWR</text>
+</a></g>
 <g transform="translate(378, 291) rotate(30.0)" class="key keypos-54">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <text x="0" y="0" class="key tap">␣</text>
@@ -1271,8 +1272,8 @@ rect.held, rect.combo.held {
 </g>
 <g transform="translate(580, 274) rotate(-22.5)" class="key keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#RAI">
-<text x="0" y="0" class="key tap layer-activator">RAI</text>
+<a href="#RAIS">
+<text x="0" y="0" class="key tap layer-activator">RAIS</text>
 </a></g>
 <g transform="translate(644, 259)" class="key keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
