@@ -26,6 +26,13 @@
             timeout-ms = <40>;
             layers = <0 1>;
         };
+
+        Capslock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <53 56>;
+            timeout-ms = <40>;
+            layers = <0>;
+        };
     };
 
     behaviors {

@@ -498,6 +498,12 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="182" y="132" width="28" height="26" class="combo"/>
 <text x="196" y="145" class="combo tap">ESCAPE</text>
 </g>
+<g class="combo combopos-2">
+<path d="M448,274 l-113,0" class="combo"/>
+<path d="M448,274 l113,0" class="combo"/>
+<rect rx="6" ry="6" x="434" y="261" width="28" height="26" class="combo"/>
+<text x="448" y="274" class="combo tap"><tspan style="font-size: 75%">CAPSLOCK</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 398)" class="layer-LOWR">

@@ -136,3 +136,6 @@ combos:
 - p: [26, 27, 28]
   k: ESCAPE
   l: [BASE, LOWR]
+- p: [53, 56]
+  k: CAPSLOCK
+  l: [BASE]
