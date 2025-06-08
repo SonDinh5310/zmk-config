@@ -1,9 +1,9 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  BASE: [ESCAPE, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', \, ↹, Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace-outline$$', LEFT CONTROL, A, S, D, F, G, H,
+  BAS: [ESCAPE, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', \, ↹, Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace-outline$$', LEFT CONTROL, A, S, D, F, G, H,
     J, K, L, ;, '''', '$$mdi:apple-keyboard-shift$$', Z, X, C, V, B, MUTE, MUTE, N, M, ',', ., /, '$$mdi:apple-keyboard-shift$$', LEFT CONTROL, '$$mdi:apple-keyboard-command$$',
-    LEFT ALT, '&td_mo_layer', ␣, ␣, RAIS, RIGHT ALT, '$$mdi:apple-keyboard-command$$', RIGHT CONTROL]
-  LOWR:
+    LEFT ALT, '&td_mo_layer', ␣, ␣, RAI, RIGHT ALT, '$$mdi:apple-keyboard-command$$', RIGHT CONTROL]
+  LOW:
   - '`'
   - F1
   - F2
@@ -16,7 +16,7 @@ layers:
   - F9
   - F10
   - F11
-  - RAIS
+  - RAI
   - '~'
   - '='
   - KP PLUS
@@ -64,7 +64,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  RAIS:
+  RAI:
   - BT CLR
   - BT 1
   - BT 2
@@ -125,13 +125,14 @@ layers:
   - {t: ▽, type: trans}
   - Boot
   - Reset
-  GAME: [Esc, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', \, ↹, Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace-outline$$', '$$mdi:apple-keyboard-control$$',
+  GAM: [Esc, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', \, ↹, Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace-outline$$', '$$mdi:apple-keyboard-control$$',
     A, S, D, F, G, H, J, K, L, ;, '''', '$$mdi:apple-keyboard-shift$$', Z, X, C, V, B, MUTE, MUTE, N, M, ',', ., /, '$$mdi:apple-keyboard-shift$$', '$$mdi:apple-keyboard-control$$',
-    '$$mdi:apple-keyboard-command$$', '$$mdi:apple-keyboard-option$$', LOWR, ␣, ENTER, RAIS, '$$mdi:apple-keyboard-option$$', '$$mdi:apple-keyboard-command$$', '$$mdi:apple-keyboard-control$$']
+    '$$mdi:apple-keyboard-command$$', '$$mdi:apple-keyboard-option$$', '&td_mo_layer', ␣, ENTER, RAI, '$$mdi:apple-keyboard-option$$', '$$mdi:apple-keyboard-command$$',
+    '$$mdi:apple-keyboard-control$$']
 combos:
 - p: [31, 32, 33]
   k: ENTER
-  l: [BASE, LOWR, RAIS]
+  l: [BAS, LOW, RAI]
 - p: [26, 27, 28]
   k: ESCAPE
-  l: [BASE, LOWR, RAIS]
+  l: [BAS, LOW, RAI]
