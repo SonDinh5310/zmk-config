@@ -1,10 +1,10 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  BASE: ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', \, ↹, Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace-outline$$', LEFT CONTROL, A, S, D, F, G, H, J,
-    K, L, ;, '''', '$$mdi:apple-keyboard-shift$$', Z, X, C, V, B, MUTE, MUTE, N, M, ',', ., /, '$$mdi:apple-keyboard-shift$$', LEFT CONTROL, '$$mdi:apple-keyboard-command$$',
-    LEFT ALT, '&td_mo_layer', ␣, ␣, RAIS, RIGHT ALT, '$$mdi:apple-keyboard-command$$', RIGHT CONTROL]
+  BASE: [ESCAPE, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', \, ↹, Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace-outline$$', LEFT CONTROL, A, S, D, F, G, H,
+    J, K, L, ;, '''', '$$mdi:apple-keyboard-shift$$', Z, X, C, V, B, MUTE, MUTE, N, M, ',', ., /, '$$mdi:apple-keyboard-shift$$', LEFT CONTROL, '$$mdi:apple-keyboard-command$$',
+    LEFT ALT, '&td_mo_layer', ␣, ⏎, RAIS, RIGHT ALT, '$$mdi:apple-keyboard-command$$', RIGHT CONTROL]
   LOWR:
-  - ESCAPE
+  - '`'
   - F1
   - F2
   - F3
@@ -137,5 +137,5 @@ combos:
   k: ESCAPE
   l: [BASE, LOWR]
 - p: [53, 56]
-  k: CAPSLOCK
-  l: [BASE]
+  k: {t: GAME, h: toggle}
+  l: [BASE, GAME]
