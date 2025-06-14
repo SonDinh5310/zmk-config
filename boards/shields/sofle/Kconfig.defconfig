@@ -40,8 +40,6 @@ config I2C
 config SSD1306
     default y
 
-endif
-
 endif # ZMK_DISPLAY
 
 if LVGL
