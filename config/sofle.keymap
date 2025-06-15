@@ -35,16 +35,6 @@
         };
     };
 
-    behaviors {
-        td_mo_layer: td_mo_layer {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&mo 1>, <&mo 1>, <&tog 3>;
-
-            label = "td_mo_layer";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -59,17 +49,16 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE        &kp N1  &kp N2            &kp N3    &kp N4        &kp N5                                  &kp N6  &kp N7         &kp N8     &kp N9             &kp N0         &kp BACKSLASH
-&kp TAB           &kp Q   &kp W             &kp E     &kp R         &kp T                                   &kp Y   &kp U          &kp I      &kp O              &kp P          &kp BSPC
-&kp LEFT_CONTROL  &kp A   &kp S             &kp D     &kp F         &kp G                                   &kp H   &kp J          &kp K      &kp L              &kp SEMICOLON  &kp SQT
-&kp LSHFT         &kp Z   &kp X             &kp C     &kp V         &kp B         &kp C_MUTE    &kp C_MUTE  &kp N   &kp M          &kp COMMA  &kp DOT            &kp FSLH       &kp RSHFT
-                          &kp LEFT_CONTROL  &kp LGUI  &kp LEFT_ALT  &td_mo_layer  &kp SPACE     &kp RET     &mo 2   &kp RIGHT_ALT  &kp RGUI   &kp RIGHT_CONTROL
+&kp ESCAPE        &kp N1  &kp N2            &kp N3    &kp N4        &kp N5                            &kp N6  &kp N7         &kp N8     &kp N9             &kp N0         &kp BACKSLASH
+&kp TAB           &kp Q   &kp W             &kp E     &kp R         &kp T                             &kp Y   &kp U          &kp I      &kp O              &kp P          &kp BSPC
+&kp LEFT_CONTROL  &kp A   &kp S             &kp D     &kp F         &kp G                             &kp H   &kp J          &kp K      &kp L              &kp SEMICOLON  &kp SQT
+&kp LSHFT         &kp Z   &kp X             &kp C     &kp V         &kp B   &kp C_MUTE    &kp C_MUTE  &kp N   &kp M          &kp COMMA  &kp DOT            &kp FSLH       &kp RSHFT
+                          &kp LEFT_CONTROL  &kp LGUI  &kp LEFT_ALT  &mo 1   &kp SPACE     &kp RET     &mo 2   &kp RIGHT_ALT  &kp RGUI   &kp RIGHT_CONTROL
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
                 <&inc_dec_kp PG_DN PG_UP>;
-
         };
 
         lower_layer {
@@ -117,13 +106,12 @@
 
         gaming_layer {
             display-name = "GAME";
-
             bindings = <
-&kp ESC    &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                                  &kp N6  &kp N7    &kp N8     &kp N9     &kp N0    &kp BSLH
-&kp TAB    &kp Q   &kp W      &kp E     &kp R     &kp T                                   &kp Y   &kp U     &kp I      &kp O      &kp P     &kp BSPC
-&kp LCTRL  &kp A   &kp S      &kp D     &kp F     &kp G                                   &kp H   &kp J     &kp K      &kp L      &kp SEMI  &kp APOS
-&kp LSHFT  &kp Z   &kp X      &kp C     &kp V     &kp B         &kp C_MUTE    &kp C_MUTE  &kp N   &kp M     &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
-                   &kp LCTRL  &kp LGUI  &kp LALT  &td_mo_layer  &kp SPACE     &kp ENTER   &mo 2   &kp RALT  &kp RGUI   &kp RCTRL
+&kp ESC    &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                            &kp N6  &kp N7    &kp N8     &kp N9     &kp N0    &kp BSLH
+&kp TAB    &kp Q   &kp W      &kp E     &kp R     &kp T                             &kp Y   &kp U     &kp I      &kp O      &kp P     &kp BSPC
+&kp LCTRL  &kp A   &kp S      &kp D     &kp F     &kp G                             &kp H   &kp J     &kp K      &kp L      &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z   &kp X      &kp C     &kp V     &kp B   &kp C_MUTE    &kp C_MUTE  &kp N   &kp M     &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
+                   &kp LCTRL  &kp LGUI  &kp LALT  &none   &kp SPACE     &kp ENTER   &mo 2   &kp RALT  &kp RGUI   &kp RCTRL
             >;
 
             sensor-bindings =
