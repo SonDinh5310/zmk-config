@@ -66,7 +66,7 @@ include:
     artifact-name: sofle_right
   # peripheral_left
   - board: nice_nano_v2
-    shield: sofle_left
+    shield: sofle_left_peripheral
     cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
     artifact-name: sofle_left
   # prospector_dongle
