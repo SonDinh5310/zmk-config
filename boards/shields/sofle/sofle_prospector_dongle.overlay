@@ -5,6 +5,7 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <sofle.dtsi>
 #include <layouts/josefadamcik/sofle.dtsi>
 
 &josefadamcik_sofle_layout {
