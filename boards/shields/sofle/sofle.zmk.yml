@@ -2,19 +2,15 @@ file_format: "1"
 id: sofle
 name: Sofle
 type: shield
-url: https://github.com/josefadamcik/SofleKeyboard
+url: https://github.com/SonDinh5310/zmk-config
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
   - keys
   - display
   - encoder
-  # - underglow
   - studio
 siblings:
-  - sofle_left
+  # - sofle_left # left side as central
   - sofle_right
   - sofle_left_peripheral
-  # - sofle_dongle_xiao
-  # - sofle_dongle_pro_micro
-  - sofle_prospector_dongle
