@@ -40,7 +40,7 @@
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
         zmk,physical-layout = &josefadamcik_sofle_layout;
-        };
+    };
 };
 
  &pro_micro_i2c {
