@@ -1,7 +1,5 @@
 # Sofle v1 ZMK configs
 
-<br>
-
 # INTRO
 
 The objective of this repository is to serve as a base for configuring your
