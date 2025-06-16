@@ -74,7 +74,7 @@ include:
     shield: sofle_prospector_dongle
     cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Sofle_OLED\" -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=n
     artifact-name: sofle_dongle
-    # snippet: studio-rpc-usb-uart
+    snippet: studio-rpc-usb-uart
   # nice_nano_v2 reset settings
   - board: nice_nano_v2
     shield: settings_reset
