@@ -62,7 +62,7 @@ include:
   # peripheral_right
   - board: nice_nano_v2
     shield: sofle_right
-    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
+    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000 -DCONFIG_ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE=y
     artifact-name: sofle_right
   # peripheral_left
   - board: nice_nano_v2
