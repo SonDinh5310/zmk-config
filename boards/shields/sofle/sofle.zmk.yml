@@ -12,5 +12,5 @@ features:
   - studio
 siblings:
   # - sofle_left # left side as central
-  - sofle_right
   - sofle_left_peripheral
+  - sofle_right
