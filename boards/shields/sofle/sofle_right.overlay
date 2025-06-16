@@ -1,18 +1,8 @@
-/*
- * Copyright (c) 2020 Ryan Cross
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include "sofle.dtsi"
 #include <layouts/josefadamcik/sofle.dtsi>
 
 &josefadamcik_sofle_layout {
     transform = <&default_transform>;
-};
-
-&default_transform {
-    col-offset = <6>;
 };
 
 &kscan0 {

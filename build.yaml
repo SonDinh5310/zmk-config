@@ -55,25 +55,25 @@
 include:
   # central_left
   # - board: nice_nano_v2
-  #   shield: sofle_left nice_oled
+  #   shield: sofle_left_central
   #   cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Sofle_OLED\"  -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
   #   artifact-name: sofle_left
   #   snippet: studio-rpc-usb-uart
   # peripheral_right
   - board: nice_nano_v2
-    shield: sofle_right nice_oled
-    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
+    shield: sofle_right
+    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000 -DCONFIG_ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE=y
     artifact-name: sofle_right
   # peripheral_left
   - board: nice_nano_v2
-    shield: sofle_left_peripheral nice_oled
+    shield: sofle_left_peripheral
     cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
     artifact-name: sofle_left
   # prospector_dongle
   - board: seeeduino_xiao_ble
     shield: sofle_prospector_dongle prospector_adapter
     cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Sofle_OLED\" -DCONFIG_ZMK_SLEEP=n
-    artifact-name: sofle_prospector_dongle
+    artifact-name: sofle_dongle
     snippet: studio-rpc-usb-uart
   # nice_nano_v2 reset settings
   - board: nice_nano_v2
