@@ -3,16 +3,16 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     # prospetor dongle display
-    - name: carrefinho                        
-      url-base: https://github.com/carrefinho
+    # - name: carrefinho                        
+    #   url-base: https://github.com/carrefinho
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
     # prospector dongle display
-    - name: prospector-zmk-module                 
-      remote: carrefinho                      
-      revision: main              
+    # - name: prospector-zmk-module                 
+    #   remote: carrefinho                      
+    #   revision: main              
   self:
     path: config
