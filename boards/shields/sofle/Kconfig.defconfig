@@ -35,6 +35,9 @@ if SHIELD_SOFLE_LEFT || SHIELD_SOFLE_RIGHT || SHIELD_SOFLE_LEFT_PERIPHERAL
 config ZMK_SPLIT
     default y
 
+config ZMK_DISPLAY
+    default y
+
 if ZMK_DISPLAY
 
 config I2C
