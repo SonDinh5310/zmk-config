@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     # dongle screen
-    - name: carrefinho                        
+    - name: SonDinh5310                       
       url-base: https://github.com/SonDinh5310
   projects:
     - name: zmk
