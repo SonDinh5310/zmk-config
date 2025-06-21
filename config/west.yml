@@ -2,17 +2,16 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # prospetor dongle display
+    # dongle screen
     - name: carrefinho                        
-      url-base: https://github.com/carrefinho
+      url-base: https://github.com/SonDinh5310
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    # prospector dongle display
-    - name: prospector-zmk-module                 
-      remote: carrefinho                      
-      revision: main              
+    - name: zmk-dongle-screen
+      remote: SonDinh5310
+      revision: main         
   self:
     path: config

@@ -69,9 +69,9 @@ include:
     shield: sofle_left_peripheral
     cmake-args: -DCONFIG_ZMK_SLEEP=y
     artifact-name: sofle_left
-  # prospector_dongle
+  # dongle
   - board: seeeduino_xiao_ble
-    shield: sofle_prospector_dongle prospector_adapter
+    shield: sofle_dongle dongle_screen
     cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Sofle_OLED\" -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=n
     artifact-name: sofle_dongle
     snippet: studio-rpc-usb-uart
