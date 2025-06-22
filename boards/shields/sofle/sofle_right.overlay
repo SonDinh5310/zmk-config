@@ -5,6 +5,10 @@
     transform = <&default_transform>;
 };
 
+&default_transform {
+    col-offset = <6>;
+};
+
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
     wakeup-source;
