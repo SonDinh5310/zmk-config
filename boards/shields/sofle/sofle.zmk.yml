@@ -14,3 +14,4 @@ siblings:
   # - sofle_left # left side as central
   - sofle_left_peripheral
   - sofle_right
+  - sofle_dongle
