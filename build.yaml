@@ -72,7 +72,7 @@ include:
   # dongle
   - board: seeeduino_xiao_ble
     shield: sofle_dongle dongle_screen
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=n
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=n -DCONFIG_DONGLE_SCREEN_MAX_BRIGHTNESS=50
     artifact-name: sofle_dongle
     snippet: studio-rpc-usb-uart
   # nice_nano_v2 reset settings
