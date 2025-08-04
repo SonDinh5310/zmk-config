@@ -1,12 +1,5 @@
-/*
- * Copyright (c) 2020 Pete Johanson
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <layouts/josefadamcik/sofle.dtsi>
-#include "sofle.dtsi"
 
 &josefadamcik_sofle_layout {
     transform = <&default_transform>;
@@ -42,22 +35,37 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         rows = <0>;
         events = <0>;
     };
-};
 
-//dummy for encoders to work
-//idea from this https://github.com/ergomechstore/sofle-hybrid-ergomech-zmk/blob/test_mouse/boards/shields/sofle_ergomech/sofle_ergomech_dongle.overlay
-&dummy_encoder_left {
-    status = "okay";
-};
+    /*
+    row-gpios
+        = <&xiao_d 0 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 1 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 2 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 3 GPIO_ACTIVE_HIGH>
+        ;
+    };
+    */
 
-&dummy_encoder_right {
-    status = "okay";
-};
-
-&uart0 {
+    left_encoder: encoder_left {
+    compatible = "alps,ec11";
+    a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    steps = <80>;
     status = "disabled";
-};
+    };
 
-&xiao_serial {
+    right_encoder: encoder_right {
+    compatible = "alps,ec11";
+    a-gpios = <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    steps = <80>;
     status = "disabled";
+
+    };
+
+    sensors {
+    	compatible = "zmk,keymap-sensors";
+    	sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <20>;
+    };
 };
