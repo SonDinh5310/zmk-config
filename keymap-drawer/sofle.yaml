@@ -308,6 +308,3 @@ layers:
   - {t: ▽, type: trans}
   - Boot
   - Reset
-combos:
-- p: [53, 56]
-  k: SYSTEM
