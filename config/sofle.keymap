@@ -34,13 +34,6 @@
         base_layer {
             display-name = "BASE";
 
-            // ------------------------------------------------------------------------------------------------------------
-            // |  `    |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
-            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
-
             bindings = <
 &kp ESCAPE        &kp N1  &kp N2    &kp N3    &kp N4  &kp N5                            &kp N6  &kp N7  &kp N8     &kp N9    &kp N0         &kp BACKSLASH
 &kp TAB           &kp Q   &kp W     &kp E     &kp R   &kp T                             &kp Y   &kp U   &kp I      &kp O     &kp P          &kp BSPC
@@ -52,17 +45,12 @@
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
                 <&inc_dec_kp PG_DN PG_UP>;
+
+            label = "BASE";
         };
 
         symbol_layer {
-            display-name = "LOWER";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // | `     |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-            // | RAISE |   1 |   2 |   3  |   4  |   5  |                   |   6  |   7   |   8   |   9  |    0  |  F12  |
-            // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
-            // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
-            //               |     |      |      |      |        |  |       |      |       |       |      |
+            display-name = "SYMBOL";
 
             bindings = <
 &gravel_accent_tilde_td  &trans     &trans          &trans            &trans          &trans                                  &trans                 &trans           &trans             &trans            &trans     &kp PIPE
@@ -72,19 +60,15 @@
                                     &trans          &trans            &trans          &trans                &trans    &trans  &trans                 &trans           &trans             &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp PG_DN PG_UP>;
+
             label = "SYMBOL";
         };
 
         navigation_layer {
             display-name = "NAV";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-            // |     | INS  | PSCR | GUI   |       |      |                | PGUP |      |       |      |       |       |
-            // |     | ALT  | CTRL | SHIFT |       | CAPS |                |  <-  |   v  |   ^   |  ->  |  DEL  | BKSPC |
-            // |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-            //              |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
 &trans  &trans      &trans     &trans       &trans       &trans                      &trans    &trans         &trans       &trans     &trans  &trans
@@ -94,11 +78,16 @@
                     &trans     &trans       &trans       &trans    &trans    &trans  &trans    &trans         &trans       &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp PG_DN PG_UP>;
+
             label = "NAV";
         };
 
         number_layer {
+            display-name = "NUMBER";
+
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
@@ -107,10 +96,15 @@
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp PG_DN PG_UP>;
             label = "NUMBER";
         };
 
         function_layer {
+            display-name = "FUNC";
+
             bindings = <
 &trans  &trans  &trans   &trans   &trans   &trans                    &trans          &trans                &trans                &trans              &trans  &trans
 &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans                    &kp K_PREVIOUS  &trans                &trans                &kp K_NEXT          &trans  &trans
@@ -118,12 +112,16 @@
 &trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans  &trans    &trans  &trans          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans              &trans  &trans
                 &trans   &trans   &trans   &trans  &trans    &trans  &trans          &trans                &trans                &trans
             >;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp PG_DN PG_UP>;
 
             label = "FUNC";
         };
 
         system_layer {
-            display-name = "RAISE";
+            display-name = "SYSTEM";
+
             bindings = <
 &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans       &trans      &trans  &trans
 &trans        &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans       &trans      &trans  &trans
@@ -133,8 +131,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp PG_UP PG_DN>;
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp PG_DN PG_UP>;
 
             label = "SYSTEM";
         };
