@@ -39,7 +39,7 @@ layers:
   - KP MULTIPLY
   - (
   - )
-  - '?'
+  - {t: ▽, type: trans}
   - '"'
   - ':'
   - _
