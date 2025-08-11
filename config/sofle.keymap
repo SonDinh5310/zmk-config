@@ -45,7 +45,7 @@
             display-name = "SYMBOL";
             bindings = <
 &gravel_accent_tilde_td  &trans     &trans          &trans            &trans          &trans                                  &trans                 &trans           &trans             &trans            &trans     &kp PIPE
-&trans                   &kp TILDE  &kp LESS_THAN   &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS                    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GREATER_THAN  &trans     &trans
+&trans                   &trans     &kp LESS_THAN   &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS                    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GREATER_THAN  &trans     &trans
 &trans                   &kp EXCL   &kp AT          &kp HASH          &kp DLLR        &kp PRCNT                               &kp CARET              &kp AMPS         &kp KP_MULTIPLY    &kp LPAR          &kp RPAR   &trans
 &kp DOUBLE_QUOTES        &kp COLON  &kp UNDERSCORE  &kp MINUS         &kp KP_PLUS     &kp KP_EQUAL          &trans    &trans  &kp KP_EQUAL           &kp KP_PLUS      &kp MINUS          &kp UNDERSCORE    &kp COLON  &kp DOUBLE_QUOTES
                                     &trans          &trans            &trans          &trans                &trans    &trans  &trans                 &trans           &trans             &trans
